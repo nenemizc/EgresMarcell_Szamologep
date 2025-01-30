@@ -23,6 +23,11 @@ namespace dobos
             return a / b;
         }
 
+        double Szorzas(double a, double b)
+        {
+            return a * b;
+        }
+
         static void Main(string[] args)
         {
         }
