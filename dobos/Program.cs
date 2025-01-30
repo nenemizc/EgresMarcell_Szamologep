@@ -18,6 +18,11 @@ namespace dobos
             return a - b;
         }
 
+        double Osztas(double a, double b)
+        {
+            return a / b;
+        }
+
         static void Main(string[] args)
         {
         }
