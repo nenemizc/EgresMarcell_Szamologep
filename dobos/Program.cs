@@ -28,6 +28,11 @@ namespace dobos
             return a * b;
         }
 
+        double Szazalek(double a, double b)
+        {
+            return Osztas(a,b)*100;
+        }
+
         static void Main(string[] args)
         {
         }
