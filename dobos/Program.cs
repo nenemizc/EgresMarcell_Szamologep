@@ -8,33 +8,56 @@ namespace dobos
 {
     internal class Program
     {
-        double Osszeadas(double a,double b)
+        static double Osszeadas(double a,double b)
         {
             return a + b;
         }
 
-        double Kivonas(double a, double b)
+        static double Kivonas(double a, double b)
         {
             return a - b;
         }
 
-        double Osztas(double a, double b)
+        static double Osztas(double a, double b)
         {
             return a / b;
         }
 
-        double Szorzas(double a, double b)
+        static double Szorzas(double a, double b)
         {
             return a * b;
         }
 
-        double Szazalek(double a, double b)
+        static double Szazalek(double a, double b)
         {
             return Osztas(a,b)*100;
         }
 
+        static void Indit() 
+        {
+            Console.WriteLine("Kérem adja meg az első számot: ");
+            double a = Double.Parse(Console.ReadLine());
+            Console.WriteLine("Kérem adja meg a második számot: ");
+            double b = Double.Parse(Console.ReadLine());
+            Console.WriteLine("Az elvégzendő művelet jele: ");
+            string jel = Console.ReadLine();
+
+            switch (jel) 
+            { 
+                case "+": Console.WriteLine($"{Osszeadas(a,b)}"); break;
+                case "-": Console.WriteLine($"{Kivonas(a,b)}"); break;
+                case "/": Console.WriteLine($"{Osztas(a,b)}"); break;
+                case "*": Console.WriteLine($"{Szorzas(a,b)}"); break;
+                case "%": Console.WriteLine($"{Szazalek(a,b)}%"); break;
+                default: Console.WriteLine("huh?"); break;
+
+            } 
+        }
+
         static void Main(string[] args)
         {
+            Indit();
+            Console.ReadLine();
         }
     }
 }
